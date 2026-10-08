@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Raksha Adhikari | Software Engineer & AI/ML</title>
+<meta name="description" content="Portfolio of Raksha Adhikari, final-year Computer Science student in Full-Stack Development and AI/ML.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf8f5;--surface:#fff;--text:#1d1b26;--muted:#6a6677;--border:#e8e3db;--a1:#6d4aff;--a2:#ff6b8a;--a3:#14b8a6;--grad:linear-gradient(135deg,var(--a1),var(--a2));--shadow:0 8px 30px rgba(40,30,80,.08);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e0d14;--surface:#171622;--text:#f0eefa;--muted:#a09bb5;--border:#2a2838;--a1:#9b83ff;--a2:#ff7d9a;--shadow:0 8px 30px rgba(0,0,0,.4)}}
+:root[data-theme="dark"]{--bg:#0e0d14;--surface:#171622;--text:#f0eefa;--muted:#a09bb5;--border:#2a2838;--a1:#9b83ff;--a2:#ff7d9a;--shadow:0 8px 30px rgba(0,0,0,.4)}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1rem/1.65 Inter,system-ui,sans-serif;transition:background .3s,color .3s;overflow-x:hidden}
+h1,h2,h3{font-family:"Space Grotesk",Inter,sans-serif;line-height:1.15;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--a1);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 1.25rem}
+section{padding:5rem 0}
+.eyebrow{font:500 .85rem "JetBrains Mono",monospace;color:var(--a1);margin-bottom:.5rem}
+h2{font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:2rem}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+/* nav */
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 80%,transparent);border-bottom:1px solid var(--border)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font:700 1.2rem "Space Grotesk",sans-serif;text-decoration:none}
+.logo span{color:var(--a2)}
+.links{display:flex;gap:1.4rem;align-items:center}
+.links a{text-decoration:none;font-size:.92rem;color:var(--muted);transition:color .2s}
+.links a:hover{color:var(--text)}
+#theme{border:1px solid var(--border);background:var(--surface);color:var(--text);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:1.05rem}
+/* hero */
+.hero{position:relative;min-height:calc(100vh - 64px);display:flex;align-items:center;padding:4rem 0;overflow:hidden}
+.hero::before{content:"";position:absolute;width:520px;height:520px;right:-120px;top:-60px;background:radial-gradient(circle,color-mix(in srgb,var(--a1) 30%,transparent),transparent 65%);filter:blur(20px)}
+.float{position:absolute;font-family:"JetBrains Mono",monospace;color:var(--a1);opacity:.22;animation:bob 9s ease-in-out infinite;user-select:none;pointer-events:none}
+@keyframes bob{50%{transform:translateY(-22px) rotate(4deg)}}
+.hero .wrap{position:relative}
+.hero h1{font-size:clamp(2.4rem,7vw,4.6rem);margin-bottom:1rem}
+.roles{font:500 clamp(.95rem,2.2vw,1.2rem) "JetBrains Mono",monospace;color:var(--muted);margin-bottom:1.5rem}
+.intro{max-width:600px;color:var(--muted);font-size:1.1rem;margin-bottom:2rem}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-bottom:2rem}
+.btn{display:inline-block;padding:.85rem 1.5rem;border-radius:999px;font-weight:600;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.p{background:var(--grad);color:#fff;box-shadow:0 8px 22px rgba(109,74,255,.35)}
+.btn.s{border:1.5px solid var(--border);background:var(--surface)}
+.social{display:flex;gap:.7rem}
+.social a{width:44px;height:44px;border-radius:50%;border:1px solid var(--border);background:var(--surface);display:grid;place-items:center;transition:transform .2s,border-color .2s}
+.social a:hover{transform:translateY(-3px);border-color:var(--a1)}
+.social svg{width:20px;height:20px;fill:currentColor}
+/* cards */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:1.6rem;box-shadow:var(--shadow);transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-4px);border-color:var(--a1)}
+.about{display:grid;gap:2rem;grid-template-columns:1.4fr 1fr;align-items:start}
+.about p{color:var(--muted);font-size:1.08rem;margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chip{padding:.4rem .9rem;border-radius:999px;background:color-mix(in srgb,var(--a1) 12%,transparent);font-size:.88rem;font-weight:500}
+.about .card h3{font-size:1rem;margin-bottom:1rem}
+.skills{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.skills h3{font-size:1.05rem;margin-bottom:1rem;display:flex;gap:.5rem;align-items:center}
+.skills .chip{font-family:"JetBrains Mono",monospace;font-size:.82rem;background:var(--bg);border:1px solid var(--border);transition:all .2s;cursor:default}
+.skills .chip:hover{background:var(--grad);color:#fff;border-color:transparent;transform:scale(1.06)}
+.projects{display:grid;gap:1.4rem;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.proj{display:flex;flex-direction:column;gap:1rem;position:relative;overflow:hidden}
+.proj.feat{grid-column:1/-1}
+.proj .top{height:6px;position:absolute;inset:0 0 auto 0;background:var(--grad)}
+.proj h3{font-size:1.4rem;margin-top:.4rem}
+.proj p{color:var(--muted);margin:0}
+.tag{font:500 .72rem "JetBrains Mono",monospace;text-transform:uppercase;letter-spacing:.06em;color:var(--a3)}
+.proj .more{margin-top:auto;font-weight:600;text-decoration:none;color:var(--a1)}
+.proj.ph{border-style:dashed;box-shadow:none;opacity:.8}
+.contact{text-align:center}
+.contact p{color:var(--muted);max-width:520px;margin:0 auto 1.8rem}
+footer{padding:2rem 0;text-align:center;color:var(--muted);font-size:.88rem;border-top:1px solid var(--border)}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media (max-width:720px){.links a{display:none}.about{grid-template-columns:1fr}section{padding:3.5rem 0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav aria-label="Main"><div class="wrap">
+<a class="logo" href="#top">raksha<span>.dev</span></a>
+<div class="links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+<button id="theme" aria-label="Toggle dark and light mode">🌙</button></div>
+</div></nav>
+
+<header class="hero" id="top">
+<span class="float" style="left:6%;top:18%;font-size:2rem">&lt;/&gt;</span>
+<span class="float" style="left:48%;top:10%;font-size:1.4rem;animation-delay:-3s">{ }</span>
+<span class="float" style="right:10%;top:55%;font-size:2.2rem;animation-delay:-5s">λ</span>
+<span class="float" style="left:12%;bottom:12%;font-size:1.5rem;animation-delay:-2s">01</span>
+<span class="float" style="right:30%;bottom:8%;font-size:1.8rem;animation-delay:-6s">=&gt;</span>
+<div class="wrap">
+<h1>Hi, I'm <span class="grad">Raksha Adhikari</span> 👋</h1>
+<p class="roles">Computer Science Student | Full-Stack Developer | AI/ML Enthusiast</p>
+<p class="intro">Final-year Computer Science student passionate about building practical software solutions and exploring Artificial Intelligence and Machine Learning. I enjoy turning ideas into functional, user-friendly applications.</p>
+<div class="cta"><a class="btn p" href="#projects">View My Projects</a><a class="btn s" href="RakshaAdhikariCseCresumee.pdf" download>Download Resume</a></div>
+<div class="social">
+<a href="https://github.com/karsha19/" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.300-3.100-.1-.4-.6-1.600.1-3.200 0 0 1-.3 3.300 1.200a11.500 11.500 0 0 1 6 0c2.300-1.500 3.300-1.200 3.300-1.200.7 1.600.2 2.800.1 3.200.8.8 1.300 1.900 1.300 3.100 0 4.600-2.800 5.600-5.500 5.900.4.400.8 1.100.8 2.200v3.300c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg></a>
+<a href="https://www.linkedin.com/in/raksha-adhikari-121214289/" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M20.400 20.500h-3.600v-5.600c0-1.300 0-3-1.800-3s-2.100 1.400-2.100 2.900v5.700H9.400V9h3.400v1.600c.5-.9 1.600-1.800 3.400-1.800 3.600 0 4.300 2.400 4.300 5.500v6.200zM5.300 7.400a2.100 2.100 0 1 1 0-4.100 2.100 2.100 0 0 1 0 4.100zM7.100 20.500H3.600V9h3.500v11.500zM22.200 0H1.800C.8 0 0 .8 0 1.700v20.600c0 .9.8 1.700 1.800 1.700h20.400c1 0 1.800-.8 1.800-1.700V1.700C24 .8 23.200 0 22.200 0z"/></svg></a>
+<a href="mailto:rakshaadhikari697@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M2 5h20v14H2V5zm2.500 2L12 12.500 19.500 7zM4 17h16V9.300l-8 5.700-8-5.700V17z"/></svg></a>
+</div></div>
+</header>
+
+<main>
+<section id="about"><div class="wrap">
+<div class="eyebrow rv">// about</div><h2 class="rv">A bit about me</h2>
+<div class="about rv">
+<p>I'm a final-year Computer Science student with hands-on experience across the stack, from database-driven web apps to machine learning models. I love learning new technologies, solving practical problems, and building projects with real-world applications.</p>
+<div class="card"><h3>Hands-on experience</h3><div class="chips"><span class="chip">Full-stack web development</span><span class="chip">Machine Learning</span><span class="chip">Artificial Intelligence</span><span class="chip">REST APIs</span><span class="chip">Database-driven apps</span></div></div>
+</div></div></section>
+
+<section id="skills"><div class="wrap">
+<div class="eyebrow rv">// skills</div><h2 class="rv">My toolkit</h2>
+<div class="skills" id="skillGrid"></div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+<div class="eyebrow rv">// projects</div><h2 class="rv">Things I've built</h2>
+<div class="projects">
+<article class="card proj feat rv"><div class="top"></div>
+<span class="tag">AI · Medical Imaging</span>
+<h3>Breast Screening Assistant</h3>
+<p>An AI-based medical imaging project focused on breast cancer screening using medical images. The project explores deep learning-based image classification and explainable AI.</p>
+<div class="chips"><span class="chip">Python</span><span class="chip">Deep Learning</span><span class="chip">Explainable AI</span></div>
+<a class="more" href="https://github.com/raksha05-ui/finalyearProject.git" target="_blank" rel="noopener">View on GitHub →</a></article>
+<article class="card proj rv"><div class="top"></div>
+<span class="tag">Web App · Pricing</span>
+<h3>Cloud Infrastructure Pricing Calculator</h3>
+<p>A professional pricing tool built for cloud sales teams to generate accurate quotations quickly from structured pricing data and downloadable reports.</p>
+<div class="chips"><span class="chip">Python</span><span class="chip">Streamlit</span><span class="chip">Excel</span><span class="chip">Pricing Logic</span></div>
+<a class="more" href="https://github.com/karsha19/Pricing_calculator" target="_blank" rel="noopener">View on GitHub →</a></article>
+<article class="card proj rv"><div class="top"></div>
+<span class="tag">AI · Food Tech</span>
+<h3>VegiVision</h3>
+<p>An immersive vegetable recipe maker that identifies ingredients, generates recipes with AI, supports multilingual outputs, and saves personal favorites in a journal.</p>
+<div class="chips"><span class="chip">Python</span><span class="chip">Streamlit</span><span class="chip">Gemini API</span><span class="chip">SQLite</span><span class="chip">Voice Input</span></div>
+<a class="more" href="https://github.com/karsha19/Vegi_Vision" target="_blank" rel="noopener">View on GitHub →</a></article>
+</div></div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+<div class="eyebrow rv">// contact</div><h2 class="rv">Let's <span class="grad">work together</span></h2>
+<p class="rv">I'm looking for opportunities in Software Engineering, Full-Stack Development, and AI/ML. My inbox is always open.</p>
+<a class="btn p rv" href="mailto:rakshaadhikari697@gmail.com">Say hello</a>
+</div></section>
+</main>
+<footer>© <span id="yr"></span> Raksha Adhikari · Built with care</footer>
+
+<script>
+var skills={"Programming":["C++","Python","JavaScript"],"Frontend":["HTML5","CSS3","React.js","Redux"],"Backend":["Node.js","Express.js","REST APIs"],"Database":["SQL"],"AI/ML":["NumPy","Pandas","Scikit-learn","Matplotlib"],"Tools":["Git","GitHub","VS Code","Postman"]};
+var icons={"Programming":"⌨️","Frontend":"🎨","Backend":"⚙️","Database":"🗄️","AI/ML":"🧠","Tools":"🛠️"};
+var g=document.getElementById("skillGrid");
+Object.keys(skills).forEach(function(k){var c=document.createElement("div");c.className="card rv";c.innerHTML="<h3><span aria-hidden='true'>"+icons[k]+"</span>"+k+"</h3><div class='chips'>"+skills[k].map(function(s){return "<span class='chip'>"+s+"</span>"}).join("")+"</div>";g.appendChild(c)});
+document.getElementById("yr").textContent=new Date().getFullYear();
+var root=document.documentElement,btn=document.getElementById("theme");
+function dark(){var t=root.getAttribute("data-theme");return t?t==="dark":matchMedia("(prefers-color-scheme:dark)").matches}
+function sync(){btn.textContent=dark()?"☀️":"🌙"}
+try{var s=localStorage.getItem("theme");if(s)root.setAttribute("data-theme",s)}catch(e){}
+sync();
+btn.onclick=function(){var n=dark()?"light":"dark";root.setAttribute("data-theme",n);try{localStorage.setItem("theme",n)}catch(e){}sync()};
+var els=document.querySelectorAll(".rv");
+if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)})}else{els.forEach(function(e){e.classList.add("in")})}
+</script>
+</body>
+</html>

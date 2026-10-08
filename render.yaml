@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: raksha-portfolio
+    runtime: static
+    staticPublishPath: ./
+    pullRequestPreviewsEnabled: true
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: sameorigin
